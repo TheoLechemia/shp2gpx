@@ -1,22 +1,22 @@
 from osgeo import ogr, osr
 
 ##InputFile=vector
-##FieldName=field InputFile
-##FieldComment=field InputFile
-##outputFile = output file
+##Field_Name=field InputFile
+##Field_Desc=field InputFile
+##outputFile=output file
 
-FieldName = str(FieldName) 
-FieldComment = str(FieldComment)
+Field_Name = str(Field_Name) 
+Field_Desc = str(Field_Desc)
 
 
 def writeNameAndDesc(feature):
-    name = feature.GetField(FieldName)
+    name = feature.GetField(Field_Name)
     if type(name) is not unicode:
         name = unicode(name)
     nameTag = u'<name>'+name+'</name>'
     outputGPX.write(nameTag.encode('utf-8'))
-    if FieldComment != "":
-        desc = feature.GetField(FieldComment)
+    if Field_Desc != "":
+        desc = feature.GetField(Field_Desc)
         if type(desc) is not 'unicode':
             desc = unicode(desc)
         descTag = u'<desc>'+desc+'</desc>'
