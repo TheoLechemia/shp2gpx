@@ -5,3 +5,5 @@ Ce script permet notamment l'interopabilité avec les GPS Garmin qui necessite q
 Depuis la boîte à outils QGIS, ajouter un script utilisateur à partir d'un fichier. La fenêtre suivante se lance:  
 
 ![capture](https://github.com/TheoLechemia/shp2gpx/blob/master/capture.PNG)
+
+Le script fonctionne avec les points et les polyignes, mais pas avec les polygones.
